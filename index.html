@@ -11,28 +11,124 @@
 
 <body>
     <header>
-        <nav></nav>
+        <div class="logo">
+            <span class="logo-icon">&#127836;</span>
+            <h1>Seoul way</h1>
+            <span>서울의 방식</span>
+
+        </div>
+        <nav class="navigation">
+            <a href="#ingredients" class="nav-link">
+                <span>Ingredients</span>
+            </a>
+            <a href="#inventory" class="nav-link">
+                <span>Inventory</span>
+            </a>
+            <a href="#movements" class="nav-link">
+                <span>Suppliers</span>
+            </a>
+            <a href="#movements" class="nav-link">
+                <span>Movements</span>
+            </a>
+            <a href="#alerts" class="nav-link">
+                <span>Alerts</span>
+            </a>
+        </nav>
         <button id="dark-mode-toggle" aria-label="Cambiar entre modo claro y oscuro">
             <img src="./img/sun.svg" id="light-toggle">
             <img src="./img/moon.svg" id="dark-toggle">
         </button>
     </header>
+
     <main>
-        <h1>Hello World!</h1>
-        <article></article>
-        <article></article>
+        <div class="info">
+            <strong>Seoul way</strong>
+            <small>Korean restaurant</small>
+
+        </div>
+
+        <div class="statistics">
+            <article class="stat-cards">
+
+                <div class="stat-info">
+
+                    <p> Total of Ingredients </p>
+                    <h2>86</h2>
+                    <span class="positive">
+                        ↑ 8% this month </span>
+                </div>
+            </article>
+            <article class="stat-cards">
+                <div class="stat-info">
+                    <p>Available stock</p>
+                    <h2>350 kg</h2>
+                    <span class="positive">
+                        ↑5% this week
+                    </span>
+                </div>
+
+            </article>
+
+            <article class="stat-cards">
+                <div class="stat-info">
+                    <p>Low stock</p>
+                    <h2>7</h2>
+                    <span class="warning">
+                        Requires attention
+                    </span>
+                </div>
+            </article>
+
+            <article class="stat-cards">
+                <div class="stat-info">
+                    <p>Inventory value</p>
+                    <h2>₩4.850.000</h2>
+                    <span class="positive">
+                        ↑3% this month
+                    </span>
+
+                </div>
+
+            </article>
+        </div>
+
+        <div class="filters">
+
+            <select id="categories">
+            </select>
+
+        </div>
+
+        <table id="product-table">
+            <thead>
+                <tr>
+                    <th> Ingredient</th>
+                    <th> Category</th>
+                    <th> Price</th>
+                    <th> Stock</th>
+                    <th> Available</th>
+                </tr>
+            </thead>
+            
+            <tbody id="table-body">
+            </tbody>
+        </table>
+
     </main>
-    <aside>
-        <ul></ul>
-    </aside>
     <footer> Proyecto guía 4: Desarrollo de una interfaz web responsiva
+        <p>© 2026 Seoul Way · 서울의 방식</p>
+
+        <p>Inventory's Management System</p>
+
         <ul>
             <li>Maria Antonia Posada Araujo</li>
             <li>Carlos Daniel Giraldo Naranjo</li>
             <li>Miguel Angel Ortiz Loaiza</li>
         </ul>
+
     </footer>
-    <script src="js/index.js" defer></script>
+    <script src="js/theme.js" defer></script>
+    <script src="js/products.js" defer></script>
 </body>
 
 
