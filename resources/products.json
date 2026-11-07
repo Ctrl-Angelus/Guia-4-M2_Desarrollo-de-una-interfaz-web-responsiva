@@ -1,0 +1,20 @@
+{
+    "categories": [
+        "All",
+        "vegetables",
+        "meat",
+        "sauces",
+        "spices",
+        "grains",
+        "fermented"
+    ],
+    "products": [
+        {
+            "name": "Gochujang",
+            "category": "grains",
+            "price": 90.000,
+            "stock": 8,
+            "available": true
+        }
+    ]
+}
