@@ -9,7 +9,6 @@ const setTheme = (isDark) => {
     darkToggle.classList.toggle("hidden", isDark);
     lightToggle.classList.toggle("hidden", !isDark);
 };
-
 setTheme(userPrefersDarkTheme.matches);
 
 darkModeButton.addEventListener("click", () => {
