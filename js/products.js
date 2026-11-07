@@ -1,11 +1,5 @@
-async function fetchData() {
-    try {
-        const response = await fetch('../resources/products.json');
-        const data = await response.json();
-        return data
-    } catch (error) {
-        console.error('Error:', error);
-    }
+function fetchData() {
+    return window.productData;
 }
 
 function capitalize(string) {
@@ -35,8 +29,8 @@ function fillTable(data, currentCategory) {
     }
 }
 
-async function init() {
-    let data = await fetchData();
+function init() {
+    let data = fetchData();
 
     categorySelect.addEventListener("change", (event) => {
         let category = event.target.value.toLowerCase()
