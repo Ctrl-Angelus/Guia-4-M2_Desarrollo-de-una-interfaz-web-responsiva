@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Seoul way</title>
 
     <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" type="image/svg+xml" href="img/icon.svg">
 </head>
 
 <body>
@@ -19,98 +20,116 @@
         </div>
         <nav class="navigation">
             <a href="#ingredients" class="nav-link">
+                <img src="img/ingredients.svg" class="nav-icon">
                 <span>Ingredients</span>
             </a>
             <a href="#inventory" class="nav-link">
+                <img src="img/inventory.svg" class="nav-icon">
                 <span>Inventory</span>
             </a>
             <a href="#movements" class="nav-link">
+                <img src="img/suppliers.svg" class="nav-icon">
                 <span>Suppliers</span>
             </a>
-            <a href="#movements" class="nav-link">
+            <button onclick="showCard('movements-card'); return false">
+                <img src="img/movements.svg" class="nav-icon">
                 <span>Movements</span>
-            </a>
-            <a href="#alerts" class="nav-link">
+            </button>
+            <button onclick="showCard('alert-card'); return false">
+                <img src="img/alerts.svg" class="nav-icon">
                 <span>Alerts</span>
-            </a>
+            </button>
         </nav>
         <button id="dark-mode-toggle" aria-label="Cambiar entre modo claro y oscuro">
             <img src="./img/sun.svg" id="light-toggle">
             <img src="./img/moon.svg" id="dark-toggle">
         </button>
     </header>
-
     <main>
-        <div class="info">
-            <strong>Seoul way</strong>
-            <small>Korean restaurant</small>
+        <section class="about-section">
+            <div class="content">
+                <h2>Welcome to Seoul Way</h2>
+                <p>At Seoul Way, we combine traditional Korean recipes with the highest quality fresh ingredients.
+                    Our management system ensures precise control over our inventory to always offer you the best flavor
+                    and freshness in every dish.
+                </p>
+            </div>
+            <div class="restaurant-image">
+                <img src="./img/restaurant.jpg" alt="Photo of the Seul Way restaurant">
+            </div>
+        </section>
+        <section class="cards">
+            <div class="card hidden" id="alert-card">
+                <section>
+                    This is an alerts card
+                </section>
+                <button onclick="hideCard(this)">
+                    <img src="./img/x.svg" alt="close button">
+                </button>
+            </div>
 
-        </div>
-
-        <div class="statistics">
-            <article class="stat-cards">
-
-                <div class="stat-info">
-
-                    <p> Total of Ingredients </p>
-                    <h2>86</h2>
-                    <span class="positive">
-                        ↑ 8% this month </span>
-                </div>
-            </article>
+            <div class="card hidden" id="movements-card">
+                <section>
+                    This is an movements card
+                </section>
+                <button onclick="hideCard(this)">
+                    <img src="./img/x.svg" alt="close button">
+                </button>
+            </div>
+        </section>
+        <section class="statistics">
             <article class="stat-cards">
                 <div class="stat-info">
                     <p>Available stock</p>
-                    <h2>350 kg</h2>
+                    <h2 id="total-stock">86</h2>
+                </div>
+            </article>
+            <article class="stat-cards">
+                <div class="stat-info">
+                    <p> Total of Ingredients</p>
+                    <h2 id="total-ingredients"></h2>
                     <span class="positive">
-                        ↑5% this week
+                        ↑ 8% this month
                     </span>
                 </div>
-
             </article>
-
             <article class="stat-cards">
                 <div class="stat-info">
                     <p>Low stock</p>
-                    <h2>7</h2>
-                    <span class="warning">
-                        Requires attention
-                    </span>
+                    <h2 id="low-stock"></h2>
                 </div>
             </article>
 
             <article class="stat-cards">
                 <div class="stat-info">
                     <p>Inventory value</p>
-                    <h2>₩4.850.000</h2>
-                    <span class="positive">
-                        ↑3% this month
-                    </span>
-
+                    <h2 id="inventory-value"></h2>
                 </div>
 
             </article>
-        </div>
-
-        <div class="filters">
-            <select id="categories">
-            </select>
-        </div>
-
-        <table id="product-table">
-            <thead>
-                <tr>
-                    <th> Ingredient</th>
-                    <th> Category</th>
-                    <th> Price</th>
-                    <th> Stock</th>
-                    <th> Available</th>
-                </tr>
-            </thead>
-            <tbody id="table-body">
-            </tbody>
-        </table>
-
+        </section>
+        <section id="table-wrapper">
+            <div class="table-scroll-container">
+                <div class="filters">
+                    Filter ingredients by categories:
+                    <select id="categories">
+                    </select>
+                </div>
+                <table id="product-table">
+                    <thead>
+                        <tr>
+                            <th> Ingredient</th>
+                            <th> Category</th>
+                            <th> Price (₩)</th>
+                            <th> Stock (kg)</th>
+                            <th> Available</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                    </tbody>
+                </table>
+            </div>
+        </section>
     </main>
     <footer> Proyecto guía 4: Desarrollo de una interfaz web responsiva
         <p>© 2026 Seoul Way · 서울의 방식</p>
@@ -122,6 +141,15 @@
             <li>Carlos Daniel Giraldo Naranjo</li>
             <li>Miguel Angel Ortiz Loaiza</li>
         </ul>
+
+        <nav>
+            <a href="https://github.com/Ctrl-Angelus/Guia-4-M2_Desarrollo-de-una-interfaz-web-responsiva"
+                target="_blank">
+                <img src="./img/brand-github.svg" alt="github repo">
+            </a>
+            <a href="https://github.com/Ctrl-Angelus/Guia-4-M2_Desarrollo-de-una-interfaz-web-responsiva/blob/master/README"
+                target="_blank">README</a>
+        </nav>
 
     </footer>
     <script src="resources/data.js" defer></script>
