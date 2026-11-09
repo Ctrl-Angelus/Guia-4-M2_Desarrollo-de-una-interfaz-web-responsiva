@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seoul way - About</title>
+
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="icon" type="image/svg+xml" href="img/icon.svg">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <span class="logo-icon">&#127836;</span>
+            <div class="logo-container">
+                <h1>Seoul way</h1>
+                <span>서울의 방식</span>
+            </div>
+        </div>
+        <button class="menu-toggle" aria-label="open menu" , aria-expanded="false" aria-controls="navigation">
+            <img src="./img/menu.svg" alt="menu" class="icon-open">
+            <img src="./img/x.svg" alt="close" class="icon-close">
+        </button>
+        <nav id="navigation">
+            <a href="index.html" class="nav-linnk">
+                <img src="img/home.svg" alt="Home" class="nav-icon">
+                <span>Home</span>
+            </a>
+            <a href="contact.html" class="nav-link">
+                <img src="./img/mail.svg" alt="contact" class="nav-icon">
+                <span>Contact Us</span>
+            </a>
+        </nav>
+        <button id="dark-mode-toggle" aria-label="Cambiar entre modo claro y oscuro">
+            <img src="./img/sun.svg" id="light-toggle">
+            <img src="./img/moon.svg" id="dark-toggle">
+        </button>
+    </header>
+    <main>
+        <section class="about-section">
+            <div class="content">
+                <h2>Welcome to Seoul Way</h2>
+                <p>At Seoul Way, we combine centuries-old traditional Korean recipes with the highest quality 
+                    fresh ingredients to deliver an authentic culinary journey. Every plate we serve reflects 
+                    our dedication to Korean culture, from vibrant street food favorites to classic, rich comfort dishes.
+                </p>
+
+                <p>Our integrated inventory management system ensures precise real-time control over our fresh stock 
+                    across all locations. This smart integration guarantees that every kitchen maintains optimal ingredient 
+                    quality, giving you unmatched flavor, consistency, and freshness in every single visit.
+                </p>
+            </div>
+            <div class="restaurant-image">
+                <img src="./img/restaurant-1.jpg" alt="Gangnam Branch">
+                <img src="./img/restaurant-2.jpg" alt="Hongdae Branch">
+                <img src="./img/restaurant-3.jpg" alt="Insadong Branch">
+                <img src="./img/restaurant-4.jpg" alt="Itaewon Branch">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-info">
+            <p class="footer-project">Proyecto guía 6: Proyecto Integrador de Ingeniería Web I</p>
+            <p>© 2026 Seoul Way · 서울의 방식</p>
+            <p>Inventory's Management System</p>
+        </div>
+
+        <ul class="footer-authors">
+            <li>Maria Antonia Posada Araujo</li>
+            <li>Carlos Daniel Giraldo Naranjo</li>
+            <li>Miguel Angel Ortiz Loaiza</li>
+        </ul>
+
+        <nav class="footer-links">
+            <a href="https://github.com/Ctrl-Angelus/Guia-4-M2_Desarrollo-de-una-interfaz-web-responsiva"
+                target="_blank" rel="noopener" aria-label="Repositorio en GitHub">
+                <img src="./img/brand-github.svg" alt="" width="24" height="24">
+            </a>
+            <a href="https://github.com/Ctrl-Angelus/Guia-4-M2_Desarrollo-de-una-interfaz-web-responsiva/blob/master/README"
+                target="_blank" rel="noopener">README</a>
+        </nav>
+    </footer>
+
+    <script src="js/theme.js" defer></script>
+    <script src="js/menu.js"></script>
+</body>
+
+</html>

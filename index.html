@@ -24,17 +24,13 @@
             <img src="./img/x.svg" alt="close" class="icon-close">
         </button>
         <nav id="navigation">
-            <a href="#ingredients" class="nav-link">
-                <img src="img/ingredients.svg" class="nav-icon">
-                <span>Ingredients</span>
+            <a href="about.html" class="nav-link">
+                <img src="./img/info.svg" alt="about" class="nav-icon">
+                <span>About</span>
             </a>
-            <a href="#inventory" class="nav-link">
-                <img src="img/inventory.svg" class="nav-icon">
-                <span>Inventory</span>
-            </a>
-            <a href="#movements" class="nav-link" onclick="showCard('movements-card'); return false">
-                <img src="img/suppliers.svg" class="nav-icon">
-                <span>Suppliers</span>
+            <a href="contact.html" class="nav-link">
+                <img src="./img/mail.svg" alt="contact" class="nav-icon">
+                <span>Contact</span>
             </a>
             <button onclick="showCard('movements-card'); return false">
                 <img src="img/movements.svg" class="nav-icon">
@@ -51,31 +47,20 @@
         </button>
     </header>
     <main>
-        <section class="about-section">
-            <div class="content">
-                <h2>Welcome to Seoul Way</h2>
-                <p>At Seoul Way, we combine traditional Korean recipes with the highest quality fresh ingredients.
-                    Our management system ensures precise control over our inventory to always offer you the best flavor
-                    and freshness in every dish.
-                </p>
-            </div>
-            <div class="restaurant-image">
-                <img src="./img/restaurant.jpg" alt="Photo of the Seul Way restaurant">
-            </div>
-        </section>
+        <h1>Seoul Way's Dashboard</h1>
         <section class="cards">
             <div class="card inactive" id="alert-card">
                 <button onclick="hideCard(this)">
                     <img src="./img/x.svg" alt="close button">
-                </button> 
+                </button>
                 <section class="alerts">
                     <div>
-                    <div class="section-header">
-                        <p class="section-label">ATTENTION</p>
-                        <h2>Inventory alerts</h2>
-                        <span class="alert-count">5</span>
-                    </div>
-                    
+                        <div class="section-header">
+                            <p class="section-label">ATTENTION</p>
+                            <h2>Inventory alerts</h2>
+                            <span class="alert-count">5</span>
+                        </div>
+
                         <div class="alert-content">
                             <strong>Tteok</strogn>
                                 <p>There is only 3kg left.</p>
@@ -106,11 +91,9 @@
                             <small>MIN stock: 6kg</small>
                         </div>
                     </div>
-            
+
                 </section>
             </div>
-           
-            
 
             <div class="card inactive" id="movements-card">
                 <section class="movements" id="movements">
@@ -124,50 +107,51 @@
                     </div>
                     <div class="movement-list">
                         <div class="movement">
-                    <div class="movement-info">
-                        <strong>Kimchi entry</strong>
-                        <span> Supplier: Seoul Fresh Market</span>
+                            <div class="movement-info">
+                                <strong>Kimchi entry</strong>
+                                <span> Supplier: Seoul Fresh Market</span>
+                            </div>
+
+                            <div class="movement-quantity positive">
+                                +15kg
+                            </div>
+
+                            <time datetime="10:00"> Today, 10:00</time>
+                        </div>
+
+                        <div class="movement">
+                            <div class="movement-info">
+                                <strong>Rice entry</strong>
+                                <span> Used in Kitchen</span>
+                            </div>
+
+                            <div class="movement-quantity negative">
+                                -8kg
+                            </div>
+
+                            <time datetime="09:15"> Today, 09:15 </time>
+
+                        </div>
+
+                        <div class="movement">
+                            <div class="movement-info">
+                                <strong>Gochujang entry</strong>
+                                <span>Supplier: Jeju Foods co.</span>
+                            </div>
+                            <div class="movement-quantity positive">
+                                +5kg
+                            </div>
+
+                            <time datetime="16:30"> Yesterday, 16:30 </time>
+                        </div>
                     </div>
-
-                    <div class="movement-quantity positive">
-                        +15kg
-                    </div>
-
-                    <time datetime="10:00"> Today, 10:00</time>
-                    </div> 
-
-                    <div class="movement">
-                        <div class="movement-info">
-                            <strong>Rice entry</strong>
-                            <span> Used in Kitchen</span>
-                        </div>
-
-                        <div class="movement-quantity negative">
-                           -8kg
-                        </div>
-
-                        <time datetime="09:15"> Today, 09:15 </time>
-
-                     </div>
-
-                     <div class="movement">
-                        <div class="movement-info">
-                            <strong>Gochujang entry</strong>
-                            <span>Supplier: Jeju Foods co.</span>
-                        </div>
-                        <div class="movement-quantity positive">
-                            +5kg
-                        </div>
-
-                        <time datetime="16:30"> Yesterday, 16:30 </time>
-                     </div>
-</div>
                 </section>
                 <button onclick="hideCard(this)">
                     <img src="./img/x.svg" alt="close button">
                 </button>
             </div>
         </section>
+
         <section class="statistics" id="inventory">
             <article class="stat-cards">
                 <div class="stat-info">
@@ -199,6 +183,7 @@
 
             </article>
         </section>
+        
         <section id="table-wrapper">
             <div class="table-scroll-container">
                 <div class="filters" id="ingredients">
@@ -227,7 +212,7 @@
     </main>
     <footer>
         <div class="footer-info">
-            <p class="footer-project">Proyecto guía 4: Desarrollo de una interfaz web responsiva</p>
+            <p class="footer-project">Proyecto guía 6: Proyecto Integrador de Ingeniería Web I</p>
             <p>© 2026 Seoul Way · 서울의 방식</p>
             <p>Inventory's Management System</p>
         </div>
