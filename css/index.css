@@ -25,7 +25,7 @@ button {
     display: none !important;
 }
 
-.no-transition header > nav {
+.no-transition header>nav {
     transition: none !important;
 }
 
@@ -79,7 +79,9 @@ header>nav {
     & button {
         padding: 5px;
         border-radius: 10px;
-        & img, span {
+
+        & img,
+        span {
             margin-inline: 5px;
         }
     }
@@ -120,15 +122,17 @@ header>#dark-mode-toggle {
     display: block;
 }
 
-@media (max-width: 830px){
+@media (max-width: 830px) {
     header {
         justify-content: flex-start;
     }
-    .menu-toggle { 
-        display: block; 
+
+    .menu-toggle {
+        display: block;
         margin-left: auto;
     }
-    header > nav {
+
+    header>nav {
         position: absolute;
         top: 100%;
         left: 0;
@@ -148,7 +152,7 @@ header>#dark-mode-toggle {
             visibility 0s linear 0.2s;
     }
 
-    header > nav.open {
+    header>nav.open {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
@@ -199,6 +203,48 @@ main {
 footer {
     width: 100%;
     background-color: var(--footer);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem 2rem;
+    align-items: start;
+    font-size: 0.9rem;
+    padding: 15px;
+}
+
+footer p {
+    margin: 0 0 0.4rem;
+}
+
+.footer-project {
+    font-weight: bold;
+}
+
+.footer-authors {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-links a {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+    text-decoration: underline;
 }
 
 body>main>section {
@@ -237,7 +283,7 @@ body>main>section {
     transition:
         opacity 0.2s ease,
         transform 0.2s ease,
-        visibility 0s linear 0.2s; 
+        visibility 0s linear 0.2s;
 }
 
 .card>button {
@@ -249,6 +295,13 @@ body>main>section {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 90%;
+        height: 50%;
+    }
 }
 
 .statistics {
@@ -312,7 +365,7 @@ body>main>section {
 
 #product-table {
     width: 100%;
-    min-width: 560px;
+    min-width: 540px;
     background-color: var(--table);
     border-radius: 10px 10px 0 0;
     margin-top: 10px;
@@ -334,8 +387,10 @@ body>main>section {
     & tbody tr td,
     thead tr th {
         background-color: antiquewhite;
-        height: 50px;
+        min-height: 50px;
         padding: 5px;
+        overflow-wrap: break-word;
+        hyphens: auto;
     }
 
     & thead tr th:first-child {
@@ -372,14 +427,19 @@ body>main>section {
 }
 
 @media (max-width: 768px) {
-    .table-scroll-container, .about-section, .statistics {
+
+    .table-scroll-container,
+    .about-section,
+    .statistics {
         width: 100%;
     }
+
     .about-section {
         flex-direction: column-reverse;
         justify-content: center;
-        gap: 10px;
+        gap: 20px;
     }
+
     .about-section .restaurant-image {
         flex: 0 0 auto;
         width: 100%;
