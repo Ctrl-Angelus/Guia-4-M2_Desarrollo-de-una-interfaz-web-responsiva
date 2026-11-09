@@ -55,7 +55,6 @@ body {
     text-rendering: optimizeLegibility;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 header {
