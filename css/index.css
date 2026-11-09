@@ -40,7 +40,7 @@ body.dark {
     color-scheme: dark;
     --dark: #364951;
     --background: var(--dark);
-    --text: var(--dark);
+    --text: black;
 }
 
 body {
@@ -129,8 +129,7 @@ body>main>section {
 }
 
 .card {
-    position: absolute;
-    top: 0;
+    position: fixed;
     margin: auto;
     width: 60%;
     height: 50%;
@@ -140,8 +139,27 @@ body>main>section {
     place-self: center;
     padding: 15px;
     border: 2px solid var(--table);
-
+    z-index: 20;
     color: var(--dark);
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        visibility 0s linear 0s;
+    box-shadow: 0 0 0 100vmax rgb(0 0 0 / 0.5);
+}
+
+.card.inactive {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        visibility 0s linear 0.2s; 
 }
 
 .card>button {
@@ -156,14 +174,15 @@ body>main>section {
 }
 
 .statistics {
-
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+    display: flex;
+    flex-wrap: wrap;
     gap: 18px;
-
 }
 
 .stat-cards {
+    flex: 1 1 200px;
     background-color: var(--card);
     padding: 20px;
     border: 1px;
@@ -201,17 +220,24 @@ body>main>section {
 .table-scroll-container {
     width: 80%;
     overflow-x: auto;
+    container-type: inline-size;
 }
 
 .filters {
+    position: sticky;
     background-color: aliceblue;
     padding: 10px;
+    left: 0;
+    width: 100cqw;
+    box-sizing: border-box;
 }
 
 #product-table {
     width: 100%;
     min-width: 560px;
     background-color: var(--table);
+    border-radius: 10px 10px 0 0;
+    margin-top: 10px;
 
     & tbody {
         display: block;
@@ -232,6 +258,14 @@ body>main>section {
         background-color: antiquewhite;
         height: 50px;
         padding: 5px;
+    }
+
+    & thead tr th:first-child {
+        border-radius: 10px 0 0 0;
+    }
+
+    & thead tr th:last-child {
+        border-radius: 0 10px 0 0;
     }
 }
 

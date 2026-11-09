@@ -7,12 +7,12 @@ function capitalize(string) {
 }
 
 function hideCard(current) {
-    current.parentElement.classList.add("hidden")
+    current.parentElement.classList.add("inactive")
 }
 
 function showCard(element) {
     let currentElement = document.getElementById(element)
-    currentElement.classList.remove("hidden")
+    currentElement.classList.remove("inactive")
 }
 
 const categorySelect = document.getElementById("categories")
@@ -33,8 +33,6 @@ function fillTable(data, currentCategory) {
         row.insertCell().textContent = "₩" + product.price;
         row.insertCell().textContent = product.stock;
         row.insertCell().textContent = product.available ? "Yes" : "No";
-
-        tableBody.insertRow(row)
     }
 }
 
