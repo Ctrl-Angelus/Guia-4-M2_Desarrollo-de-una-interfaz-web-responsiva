@@ -14,12 +14,14 @@
     <header>
         <div class="logo">
             <span class="logo-icon">&#127836;</span>
-            <h1>Seoul way</h1>
-            <span>서울의 방식</span>
-
+            <div class="logo-container">
+                <h1>Seoul way</h1>
+                <span>서울의 방식</span>
+            </div>
         </div>
-        <button class="menu-toggle" aria-label="open menu", aria-expanded="false" aria-controls="navigation">
-            <img src="./img/menu.svg" alt="menu">
+        <button class="menu-toggle" aria-label="open menu" , aria-expanded="false" aria-controls="navigation">
+            <img src="./img/menu.svg" alt="menu" class="icon-open">
+            <img src="./img/x.svg" alt="close" class="icon-close">
         </button>
         <nav id="navigation">
             <a href="#ingredients" class="nav-link">
@@ -114,7 +116,7 @@
         <section id="table-wrapper">
             <div class="table-scroll-container">
                 <div class="filters">
-                    Filter ingredients by categories:
+                    Filter inventory by categories:
                     <select id="categories">
                     </select>
                 </div>
