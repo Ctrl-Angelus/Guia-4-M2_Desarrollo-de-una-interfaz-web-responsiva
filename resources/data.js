@@ -35,7 +35,7 @@ window.productData = {
             "name": "Tteok",
             "category": "ingredients",
             "price": 65000,
-            "stock": 5,
+            "stock": 3,
             "available": false
         },
         {

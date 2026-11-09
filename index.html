@@ -65,24 +65,110 @@
         </section>
         <section class="cards">
             <div class="card inactive" id="alert-card">
-                <section>
-                    This is an alerts card
-                </section>
                 <button onclick="hideCard(this)">
                     <img src="./img/x.svg" alt="close button">
-                </button>
+                </button> 
+                <section class="alerts">
+                    <div>
+                    <div class="section-header">
+                        <p class="section-label">ATTENTION</p>
+                        <h2>Inventory alerts</h2>
+                        <span class="alert-count">5</span>
+                    </div>
+                    
+                        <div class="alert-content">
+                            <strong>Tteok</strogn>
+                                <p>There is only 3kg left.</p>
+                                <small>MIN stock: 6kg</small>
+                        </div>
+
+                        <div class="alert-content">
+                            <strong>Beef</strong>
+                            <p>There is only 3kg left.</p>
+                            <small>MIN stock: 6kg</small>
+                        </div>
+
+                        <div class="alert-content">
+                            <strong>Carrot</strong>
+                            <p>There is only 5kg left.</p>
+                            <small>MIN stock: 6kg</small>
+                        </div>
+
+                        <div class="alert-content">
+                            <strong>Galbi (Beef short ribs)</strong>
+                            <p>There is only 5kg left</p>
+                            <small>MIN stock: 6kg</small>
+                        </div>
+
+                        <div class="alert-content">
+                            <strong>Dangmyeon (Sweet potato noodles)</strong>
+                            <p>There is only 4kg left</p>
+                            <small>MIN stock: 6kg</small>
+                        </div>
+                    </div>
+            
+                </section>
             </div>
+           
+            
 
             <div class="card inactive" id="movements-card">
-                <section>
-                    This is an movements card
+                <section class="movements" id="movements">
+                    <div class="section-header">
+                        <div>
+                            <p class="section-label">ACTIVITY</p>
+                            <h2>Recent movements</h2>
+
+                            <p>Last inventory's entries and exists</p>
+                        </div>
+                    </div>
+                    <div class="movement-list">
+                        <div class="movement">
+                    <div class="movement-info">
+                        <strong>Kimchi entry</strong>
+                        <span> Supplier: Seoul Fresh Market</span>
+                    </div>
+
+                    <div class="movement-quantity positive">
+                        +15kg
+                    </div>
+
+                    <time datetime="10:00"> Today, 10:00</time>
+                    </div> 
+
+                    <div class="movement">
+                        <div class="movement-info">
+                            <strong>Rice entry</strong>
+                            <span> Used in Kitchen</span>
+                        </div>
+
+                        <div class="movement-quantity negative">
+                           -8kg
+                        </div>
+
+                        <time datetime="09:15"> Today, 09:15 </time>
+
+                     </div>
+
+                     <div class="movement">
+                        <div class="movement-info">
+                            <strong>Gochujang entry</strong>
+                            <span>Supplier: Jeju Foods co.</span>
+                        </div>
+                        <div class="movement-quantity positive">
+                            +5kg
+                        </div>
+
+                        <time datetime="16:30"> Yesterday, 16:30 </time>
+                     </div>
+</div>
                 </section>
                 <button onclick="hideCard(this)">
                     <img src="./img/x.svg" alt="close button">
                 </button>
             </div>
         </section>
-        <section class="statistics">
+        <section class="statistics" id="inventory">
             <article class="stat-cards">
                 <div class="stat-info">
                     <p>Available stock</p>
@@ -115,7 +201,7 @@
         </section>
         <section id="table-wrapper">
             <div class="table-scroll-container">
-                <div class="filters">
+                <div class="filters" id="ingredients">
                     Filter inventory by categories:
                     <select id="categories">
                     </select>
@@ -135,6 +221,9 @@
                 </table>
             </div>
         </section>
+
+
+
     </main>
     <footer>
         <div class="footer-info">
