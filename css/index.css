@@ -55,6 +55,9 @@ body {
 }
 
 header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
     width: 100%;
     height: 80px;
     background-color: var(--header);
@@ -68,23 +71,32 @@ header>nav {
     display: flex;
     justify-content: end;
     align-items: center;
+
+    & button {
+        padding: 5px;
+        border-radius: 10px;
+        & img, span {
+            margin-inline: 5px;
+        }
+    }
 }
 
-header>nav>a {
+header>nav>* {
     margin-inline-end: 10px;
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    & span {
-        display: flex;
-    }
 }
 
 header>#dark-mode-toggle {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav-icon {
@@ -285,7 +297,7 @@ body>main>section {
 
 .restaurant-image img {
     width: 100%;
-    height: 300px;
+    height: auto;
     border-radius: 10px;
     object-fit: cover;
     display: block;
@@ -293,6 +305,15 @@ body>main>section {
 
 @media (max-width: 768px) {
     .table-scroll-container {
+        width: 100%;
+    }
+    .about-section {
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 10px;
+    }
+    .about-section .restaurant-image {
+        flex: 0 0 auto;
         width: 100%;
     }
 }
