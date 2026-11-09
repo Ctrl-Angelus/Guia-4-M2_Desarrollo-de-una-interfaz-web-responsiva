@@ -25,6 +25,10 @@ button {
     display: none !important;
 }
 
+.no-transition header > nav {
+    transition: none !important;
+}
+
 :root {
     --light: #ffffff;
     --dark: #0b2e3d;

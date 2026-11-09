@@ -16,3 +16,12 @@ navBar.addEventListener("click", (e) => {
 });
 
 window.matchMedia("(min-width: 769px)").addEventListener("change", () => setMenu(false));
+
+let resizeTimer;
+window.addEventListener("resize", () => {
+    document.documentElement.classList.add("no-transition");
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+        document.documentElement.classList.remove("no-transition");
+    }, 150);
+});
