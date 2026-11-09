@@ -41,7 +41,7 @@
     <main class="contact">
         <section class="form-content">
             <h2>Contact Us</h2>
-            <form action="#" method="POST" class="form">
+            <form action="#" method="POST" class="form" onsubmit="event.preventDefault(); alert('The form has been submited. Thank you for your feedback.'); this.reset()">
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" placeholder="Your full name" required>
@@ -59,7 +59,7 @@
                     <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
                 </div>
 
-                <button type="submit" class="submit">Send Message</button>
+                <button type="submit" class="submit" >Send Message</button>
             </form>
         <section>    
     </main>
